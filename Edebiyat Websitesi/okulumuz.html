@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edebiyat Web Sitesi</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <script>
+    function parlat() {
+        var logo = document.getElementById('parlayanLogo');
+        logo.classList.add('parlayan');
+        setTimeout(function() {
+            logo.classList.remove('parlayan');
+        }, 500); // 0.5 saniye sonra rengi sıfırla
+    }
+
+    function baslat() {
+        setInterval(parlat, 4000); // 4 saniyede bir parlat
+    }
+
+    // Sayfa yüklendiğinde başlat
+    window.onload = baslat;
+</script>
+    <style>
+.aw-slider
+{
+  width:800px;
+  height:330px;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  margin-top:25px;
+  margin-left:500px;
+  
+}
+.resim1, .resim2, .resim3, .resim4, .resim5
+{
+  position: absolute;
+  width:800px;
+  height:330px;
+
+}
+.aw-slider > div > a > span{
+  position:absolute;
+  display:table;
+  background-color:black;
+  color:white;
+  right:0;
+  bottom:0;
+  padding:5px 10px;
+}
+.resim1{left: 0;}
+.resim2{left: 800px;}
+.resim3{left: 1600px;}
+.resim4{left: 2400px;}
+.resim5{left: 3200px;}
+.aw-slider > div
+{
+  width: 3200px;
+  height: 330px;
+  left:0px;
+  position: absolute;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-name: gecisler;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-name: gecisler;
+  -ms-animation-duration: 20s;
+  -ms-animation-iteration-count:infinite;
+  -ms-animation-name: gecisler;
+  animation-duration: 20s;
+  animation-iteration-count:infinite;
+  animation-name: gecisler;
+}
+.aw-slider > div  img{
+  opacity: 0.9;
+  filter: alpha(opacity=95);
+}
+ 
+.aw-slider > div  img:hover{
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+ 
+.aw-slider > div:hover{
+-webkit-animation-play-state:paused;
+/* Bu CSS tanımı Chrome 4.0, IE10, Firefox 16, Safari 4, Opera 15 ve üstü versiyonlarda çalışmaktadır*/
+}
+
+
+@-webkit-keyframes gecisler
+
+{
+  0% {left:0px;}
+  10% {left:0px;}
+  20% {left:-800px;}
+  30% {left:-800px;}
+  40% {left:-1600px;}
+  50% {left:-1600px;}
+  60% {left:-2400px;}
+  70% {left:-2400px;}
+  80% {left:-3200px;}
+  90% {left:-3200px;}
+}
+@-moz-keyframes gecisler
+{
+  0% {left:0px;}
+  10% {left:0px;}
+  20% {left:-800px;}
+  30% {left:-800px;}
+  40% {left:-1600px;}
+  50% {left:-1600px;}
+  60% {left:-2400px;}
+  70% {left:-2400px;}
+  80% {left:-3200px;}
+  90% {left:-3200px;}
+}
+@-ms-keyframes gecisler
+{
+  0% {left:0px;}
+  10% {left:0px;}
+  20% {left:-800px;}
+  30% {left:-800px;}
+  40% {left:-1600px;}
+  50% {left:-1600px;}
+  60% {left:-2400px;}
+  70% {left:-2400px;}
+  80% {left:-3200px;}
+  90% {left:-3200px;}
+}
+@keyframes gecisler
+{
+  0% {left:0px;}
+  10% {left:0px;}
+  20% {left:-800px;}
+  30% {left:-800px;}
+  40% {left:-1600px;}
+  50% {left:-1600px;}
+  60% {left:-2400px;}
+  70% {left:-2400px;}
+  80% {left:-3200px;}
+  90% {left:-3200px;}
+}
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.3rem 10%;
+            background: rgb(141, 13, 13);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            padding:10px 25px;
+            height:100px;
+        }
+
+        .kayan {
+            font-size: 32px;
+            color: rgb(141, 13, 13);
+            margin-top: 100px;
+            font-family: "Brush Script MT", cursive;
+        }
+
+        .kayan2 {
+            font-size: 32px;
+            color: rgb(141, 13, 13);
+            margin-top: 80px;
+            font-family: "Brush Script MT", cursive;
+        }
+
+        .çizgi {
+            background-color: rgb(141, 13, 13);
+            height: 10px;
+            width: 100%;
+            
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(141, 13, 13);
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .navbar {
+            font-size: 1.15rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 2.5rem;
+            transition: color 0.5s ease;
+            background-color: rgb(141, 13, 13);
+            margin-right: 60px;
+        }
+
+        .navbar a:hover {
+            color: black;
+        }
+
+        @keyframes glowAnimation {
+            0% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 12.5px rgba(255, 255, 255, 0.9);
+            }
+            100% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            }
+        }
+        
+
+        .logo {
+            text-decoration: none;
+            font-family: "Copperplate, Papyrus, fantasy";
+            font-size: 34px;
+            margin-right: 310px;
+            color: white;
+            animation: glowAnimation 4s infinite; /* 4 saniyede bir parlat, sonsuz tekrar */
+        }
+        #check {
+            display: none;
+        }
+        @media only screen and (max-width: 1024px) {
+    #check:checked~.follow_us i {
+        font-size: 15px; /* İstediğiniz küçük boyutu belirtin */
+    }
+}
+
+        .navbar a {
+            font-size: 1.15rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 2.5rem;
+        }
+    
+        .icons {
+            font-size: 2.8rem;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            right: 5%;
+            margin-left:0;
+        }
+        @media (max-width: 1024px){
+          .aw-slider{
+            right:500px;
+
+            
+          }  
+        .resim1,.resim2,.resim3,.resim4,.resim5{
+            width:250px;
+         
+        }
+         
+            
+        }
+
+        @media (max-width: 1024px) {
+            .icons {
+                display: inline-flex;
+            }
+            .entire{
+                font-size:10px;
+            }
+            .logo{
+                font-size:20px;
+                margin-right: 0;
+            }
+            #check:checked~.navbar {
+        margin-left: 0; /* Eklenen satır: Sol boşluğu sıfırla */
+    }
+            
+            
+
+            #check:checked~.icons #menu-icon {
+                display: none;
+            }
+
+            .icons #close-icon {
+                display: none;
+            }
+
+            #check:checked~.icons #close-icon {
+                display: block;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background: rgb(141, 13, 13);
+                transition: .3s ease;
+                overflow: hidden;
+            }
+
+            #check:checked~.navbar {
+                height: 17.7rem;
+            }
+
+            .navbar a {
+                display: block;
+                font-size: 1.1rem;
+                margin: 1.5rem 0;
+                text-align: center;
+                transform: translateY(-50px);
+                transition: .1s ease;
+                opacity: 0;
+            }
+
+            #check {
+                display: none;
+            }
+
+            #check:checked~.navbar a {
+                transform: translateY(0);
+                transition-delay: calc(.15s * var(--i));
+                opacity: 1;
+            }
+        }
+
+        .container {
+      font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: darkred;
+    padding: 20px;
+    margin-top:25px;
+}
+      @media only screen and (max-width: 1024px) {
+        .container {
+            margin-top:5px;
+       
+    }
+
+       .supporters{
+        font-size:14px;
+       }
+       .top{
+        font-size:23px;
+       }
+       .location{
+        font-size:11px;
+       }
+    
+       
+      }
+     .icons:hover{
+        color:black;
+        transition: .3s ease;
+     }
+
+
+        .top {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+        }
+
+        .top p:nth-child(2) {
+            font-size: 25px;
+            word-spacing: 3px;
+        }
+
+        .top p:nth-child(1) {
+            word-spacing: 5px;
+            letter-spacing: 2px;
+        }
+
+        .bottom {
+            color: white;
+            display: flex;
+            height: 35px;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .titles {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            height: 30px;
+            justify-content: center;
+        }
+
+        .titles h3 {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .middle {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 140px;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .middle .location {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .middle .location p {
+            margin-bottom: 10px;
+        }
+
+        .middle .location p i { 
+            font-size: large;
+            margin-right: 15px;
+        }
+
+        .middle .supporters {
+            width: 14%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .middle .follow_us {
+            width: 11%;
+        }
+
+        .middle .follow_us .fa-brands {
+            font-size: 35px;
+            margin-right: 10px;
+        }
+        .Logo{
+            width:200px;
+            height:100px;
+          
+            
+        }
+        .follow_us i {
+    display: block;
+    margin-bottom: 10px; /* İhtiyaca göre ayarlayabilirsiniz */
+    margin-left:44px;
+}
+.follow_us a {
+    text-decoration: none; /* Link altı çizgisini kaldır */
+    color:white;
+}
+
+.follow_us i:hover {
+    color: black; /* Hover durumunda ikon rengini siyah yap */
+}
+
+
+
+.fa-brands.fa-instagram{
+    color:white;
+   
+}
+.fa-brands.fa-twitter{
+    color:White;
+    
+}
+.fa-brands.fa-youtube{
+    color:white;
+    
+}
+@media only screen and (max-width: 450px){
+.logo{
+    font-size:12px;
+    margin-left:1px;
+}
+.kayan{
+    font-size:40px;
+}
+.titles{
+    font-size:15px;
+}
+.location{font-size:9px;}
+
+.info{
+    margin-right:6px;
+    margin-left:37px;
+}
+.bottom{
+    font-size:11px;
+}
+.telefon {
+        font-size: 16px;
+    }
+.gün{
+    font-size:16px;
+
+}
+.vision p:nth-child(2) {
+    
+    background-color: darkred;
+    color: white;
+    width: 800px;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-size:9px ;
+}
+.principle ul li {
+    
+    background-color: darkred;
+    color: white;
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    padding-left: 15px;
+    margin-top: 20px;
+    font-size: 9px;
+}
+
+
+}
+
+@media only screen and (max-width: 1024px){
+    .follow_us{
+        margin-right:50px;
+    }
+    .info{
+        margin-left:160px;
+    }
+    .entire{
+        width:800px;
+        height: 500px;
+    }
+    .vision p:nth-child(2) {
+    
+    background-color: darkred;
+    color: white;
+    width: 500px;
+    height: 35px;
+    display: flex;
+    border-radius: 20px;
+    margin-top: 20px;
+
+}
+
+.principle ul li {
+    
+    background-color: darkred;
+    color: white;
+    width: 500px;
+    height: 40px;
+    display: flex;
+    border-radius: 20px;
+    padding-left: 15px;
+    margin-top: 20px;
+
+}
+.mission p:nth-child(2) {
+    
+    background-color: darkred;
+    color: white;
+    width: 820px;
+    height: 50px;
+    display: flex;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+
+}
+.gün{
+    font-size:23px;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.header1 {
+    background-color: #800000;
+    padding: 1rem;
+    margin-top:-200px;
+}
+
+header h2 {
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #800000;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 5px solid rgb(141, 13, 13);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom:200px;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    border-bottom: 2px solid #800000;
+    padding-bottom: 0.5rem;
+    color: #800000;
+}
+
+footer {
+    background-color: #800000;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    margin-top: 1.5rem;
+}
+
+.date {
+    font-size: 18px;
+    color: #888;
+}
+
+.text {
+    margin-bottom: 20px;
+}
+.school {
+
+display: flex;
+flex-direction: row;
+justify-content: space-around;  
+font-family: sans-serif;
+background-color: darkred;
+}
+
+.teacher , .student , .class , .workshop{
+
+
+color: white;
+width: 150px;
+height: 210px;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+
+.fa-solid {
+
+font-size: 50px;  
+ margin-top:15px ;
+}
+
+.teacher p:nth-child(2) {
+
+  font-size: 30px;
+  
+}
+
+.teacher p:nth-child(3) {
+
+ margin-bottom: 15px;
+  
+}
+.student p:nth-child(2) {
+
+  font-size: 30px;
+  
+}
+
+.student p:nth-child(3) {
+
+ margin-bottom: 15px;
+  
+}
+
+.class p:nth-child(2) {
+
+  font-size: 30px;
+  
+}
+
+.class p:nth-child(3) {
+
+ margin-bottom: 15px;
+  
+}
+
+.workshop p:nth-child(2) {
+
+  font-size: 30px;
+  
+}
+
+.workshop p:nth-child(3) {
+
+ margin-bottom:15px;
+}
+.Proje{
+    margin-left:20px;
+}
+.entire {
+  width: 800px;
+  height: 500px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 75px;
+  justify-content: center;
+
+  
+} 
+
+.vision {
+
+    height: 90px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  
+  .vision p:nth-child(1) {
+  
+    font-size: 27px;
+    color: darkred;
+    letter-spacing: 2px;
+    
+  }
+  
+  .vision p:nth-child(2) {
+    
+      background-color: darkred;
+      color: white;
+      width: 800px;
+      height: 35px;
+      display: flex;
+      border-radius: 20px;
+      margin-top: 20px;
+  }
+
+  .mission {
+
+    height: 90px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  
+  .mission p:nth-child(1) {
+  
+    font-size: 27px;
+    color: darkred;
+    letter-spacing: 2px;
+    
+  }
+  
+  .mission p:nth-child(2) {
+    
+      background-color: darkred;
+      color: white;
+      width: 1020px;
+      height: 35px;
+      display: flex;
+      border-radius: 20px;
+      margin-top: 20px;
+  }
+
+  .principle {
+
+    height: 90px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  
+  .principle p {
+  
+    font-size: 27px;
+    color: darkred;
+    letter-spacing: 2px;
+    
+  }
+  
+  .principle ul li {
+    
+      background-color: darkred;
+      color: white;
+      width: 700px;
+      height: 25px;
+      display: flex;
+      border-radius: 20px;
+      padding-left: 15px;
+      margin-top: 20px;
+  }
+
+  .fa-solid {
+
+    font-size: 40px;
+    margin-right: 20px;
+  }
+
+  
+  .fa-brands {
+
+    font-size: 40px;
+    margin-right:20px;
+}
+
+
+   
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="resim.jpg" class="Logo" alt="logo">
+       
+        
+        <a href="#" class="logo" id="parlayanLogo">
+             15 Temmuz Şehitleri AIHL
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="ana_sayfa.html" style="--i:0;">Ana Sayfa</a>
+            <a href="okulumuz.html" style="--i:1;">Okulumuz</a>
+            <a href="siir.html" style="--i:2;">Şiir</a>
+            <a href="gorsel.html" style="--i:3;">Görsel</a>
+            <a href="video.html" style="--i:4;">Video</a>
+        </nav>
+    </header>
+    <div class="entire">
+        <div class="vision">
+            <p><i class="fa-solid fa-eye-low-vision"></i>Vizyonumuz</p>
+            <p>Küreselleşen dünyada fark yaratan, İslam dünyasında örnek, Türkiye’de lider bir eğitim kurumu olmaktır.</p>
+        </div>
+        
+        <div class="mission">
+            <p><i class="fa-solid fa-list-check"></i>Misyonumuz</p>
+            <p>Türk Mili Eğitiminin amaçlarını benimsemiş, insanlığa yararlı, örnek bireyler yetiştirmektir. </p>
+        </div>
+
+        <div class="principle">
+            <p><i class="fa-brands fa-product-hunt"></i>İlkelerimiz</p>
+            <ul>
+                <li>Öğrencilerimizin öğrenmeyi öğrenmesi önceliğimizdir</li>
+                <li>Şekil ve kalıpçılık değil, kişilik geliştirmek hedefimizdir.</li>
+                <li>Korku ve otorite yerine sevgiye ve demokratik katılıma önem veren bir eğitim anlayışı için çalışırız.</li>
+                <li>Öğrenciler bütün çalışmalarımızın ortak noktasıdır.</li>
+            </ul>
+        </div>
+   </div>
+
+    
+        <h2 style="margin-top:200px;">15 Temmuz Şehitleri AİHL Okulumuzun Tarihçesi</h2>
+   
+    
+    <main style="margin-top:200px">
+     
+        <section id=" Kurulus">
+            <h2>Kuruluş</h2>
+            <p>Bahçelievler 15 Temmuz Şehitleri Anadolu İmam Hatip Lisesi, eğitim-öğretim faaliyetlerine fen bilimleri ve sosyal bilimler proje okulu olarak 15 Temmuz 2016 tarihinde başlamıştır.</p>
+        </section>
+        <section id=" Bina">
+            <h2>Bina ve Kampüs</h2>
+            <p>Okulumuz dersliklerin ve idari birimlerin bulunduğu "ana bina" ile yatılı öğrencilerin bulunduğu "pansiyon" binasından oluşmaktadır. Aynı zamanda bir eğitim kampüsü içinde bulunmaktadır.</p>
+        </section>
+        <section id=" Dil">
+            <h2>Dil Öğretimi</h2>
+            <p>Okulumuzda 2020-2021 eğitim öğretim yılından itibaren Arapça ve İngilizce olmak üzere hazırlık sınıfı uygulaması başlamıştır.</p>
+        </section>
+        <section id=" Proje">
+            <h2>Proje Öğretimi</h2>
+            <p>Okulumuz sınavla öğrenci alan bir proje okuludur. Okulumuzda 2021-2022 Eğitim Öğretim Yılı'ndan itibaren aşağıdaki projeler okutulmaktadır:</p>
+            <ul style="margin-left:20px;">
+                <li>Teknoloji ve Fen Bölümü (İngilizce Hazırlıklı 1 + 4 Yıl)</li>
+                <li>Fen Bilimleri ve Sosyal Bilimler Bölümü (Arapça Hazırlıklı 1 + 4 Yıl)</li>
+                <li>Fen Bilimleri ve Sosyal Bilimler Bölümü (4 Yıl)</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Bahçelievler 15 Temmuz Şehitleri Anadolu İmam Hatip Lisesi</p>
+    </footer>
+    <div class="school">
+        <div class="teacher">
+          <i class="fa-solid fa-user"></i>
+          <p>63</p>
+          <p>ÖĞRETMEN</p>
+        </div>
+        
+        <div class="student">
+          <i class="fa-solid fa-users"></i>
+          <p>716</p>
+          <p>ÖĞRENCİ</p>
+        </div>
+ 
+        <div class="class">
+          <i class="fa-solid fa-school"></i>
+          <p>42</p>
+          <p>DERSLİK</p>
+        </div>
+ 
+        <div class="workshop">
+         <i class="fa-solid fa-microscope"></i>
+         <p>20</p>
+         <p>ATÖLYE</p>
+        </div>
+      </div> 
+ 
+
+    
+  
+
+    <!-- İkinci HTML belgesinden gelen içerik -->
+    <div class="container">
+        <div class="top">
+            <p style="font-size:16px"class="gün"><i class="fa-regular fa-clock"></i> Pazartesi-Cuma : 09:00 - 17:00 </p>
+            <p style="font-size:16px"><i style="font-size:16px" class="fa-solid fa-phone"></i> Telefon: +90 552 847 56 64</p>
+        </div>
+        <hr size="1" color="grey">
+        <div class="titles">
+            <h3>Bize Ulaş</h3>
+            <h3>Yapım Ekibi</h3>
+            <h3>Sosyal Medya</h3>
+        </div>
+        <div class="middle">
+            <div class="location">
+                <p><i class="fa-solid fa-location-dot"></i>Yenibosna Merkez Mahallesi, 1. Asena Sokak No21/1,
+                    Bahçelievler/İstanbul</p>
+                <p class="info"style="margin-right:160px;"><i class="fa-solid fa-square-envelope"></i>İnfo@aihl15temmuz.k12.tr</p>
+            </div>
+            <div class="supporters">
+                <ul>
+                    <li>Abdullah Duran</li>
+                    <li>Berat Çolak</li>
+                    <li>Ahmet Efe Kılıç</li>
+                </ul>
+            </div>
+            <div class="follow_us">
+                <a href="https://www.instagram.com/aihl15temmuz?igsh=MWkyNTMxOTJreXlhaw==" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a> 
+                <a href="https://twitter.com/Aihl15Temmuz" target="_blank">
+                   <i class="fa-brands fa-twitter"></i> 
+                </a>                 
+                <a href="https://youtube.com/@aihl15temmuz" target="_blank">
+                   <i class="fa-brands fa-youtube"></i>  
+                </a>
+            </div>
+        </div>
+        <hr size="1" color="grey ">
+        <div class="bottom">
+            <p>Copyright &copy; 2024 Bahçelievler 15 Temmuz Şehitleri. AİHL All rights reserved</p>
+        </div>
+    </div>
+</body>
+</html>
